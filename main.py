@@ -2,9 +2,10 @@ import getpass
 import os.path
 import sys
 
+
 import requests
 from tqdm import tqdm
-
+from Anime_models import Anime
 
 
 max_retries = 5
@@ -82,6 +83,9 @@ class Token:
         self.load_token()
 
 
+
+
+
 TOKEN = Token()
 
 
@@ -130,9 +134,30 @@ def get_collection(type_of_collection="WATCHED", limit = 10, exclude = "episodes
             raise Exception(f"Не удалось выполнить запрос после {max_retries} попыток")
     return anime_data
 
+anime_data = []
+headers = {
+        "Authorization": f"Bearer {TOKEN}",
+    }
+params = {
+    "type_of_collection": "WATCHED",
+    "limit": 1,
+    "exclude": "episodes",
+    "page": 1
+}
+url = "https://aniliberty.top/api/v1/accounts/users/me/collections/releases"
+try:
+    response = requests.get(url=url, params=params, headers=headers, timeout=10)
 
+    response.raise_for_status()
 
+    anime_data.extend(response.json()["data"])
+except Exception as e:
+    print(f"Ошибка {e}")
 
-wached_collection = get_collection(limit=10)
+print(anime_data[0])
+print(Anime.from_json(anime_data[0]))
 
-print(wached_collection[0].keys())
+# wached_collection = get_collection(limit=10)
+#
+# print(Anime.from_json(wached_collection[0]))
+
