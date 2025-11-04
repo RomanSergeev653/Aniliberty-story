@@ -134,6 +134,54 @@ def get_collection(type_of_collection="WATCHED", limit = 10, exclude = "episodes
             raise Exception(f"Не удалось выполнить запрос после {max_retries} попыток")
     return anime_data
 
+
+def get_franchises(id: int) -> list[dict]:
+    franchise_releases = []
+    headers = {
+        "Authorization": f"Bearer {TOKEN}",
+    }
+    params = {
+        "include": "franchise_releases",
+    }
+    url = f"https://aniliberty.top/api/v1/anime/franchises/release/{id}"
+
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(url=url, params=params, headers=headers, timeout=10)
+
+            response.raise_for_status()
+
+            franchise_releases.extend(response.json())
+            break
+
+        except requests.exceptions.HTTPError as e:
+            if 500 <= e.response.status_code < 600:
+                print(f"Серверная ошибка {e.response.status_code}. Повторная попытка - {attempt + 1}")
+                if attempt < max_retries - 1:
+                    continue
+            else:
+                print(f"Клиентская ошибка {e.response.status_code}")
+                raise
+
+        except requests.exceptions.ConnectionError:
+            print(f"Ошибка соединения...{attempt + 1}")
+            continue
+
+    franchise_releases_ids = []
+
+    if franchise_releases != []:
+        for releas in franchise_releases[0]['franchise_releases']:
+            franchise_releases_ids.append({
+                "id": releas['release_id'],
+                "name": releas['release']['name']['main']
+            })
+
+    return franchise_releases_ids
+
+
+
+
+
 anime_data = []
 headers = {
         "Authorization": f"Bearer {TOKEN}",
@@ -156,6 +204,7 @@ except Exception as e:
 
 print(anime_data[0])
 print(Anime.from_json(anime_data[0]))
+print(get_franchises(anime_data[0]['id']))
 
 # wached_collection = get_collection(limit=10)
 #

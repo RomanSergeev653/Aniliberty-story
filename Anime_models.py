@@ -68,6 +68,7 @@ class Anime:
     added_in_postponed_collection: int
     added_in_abandoned_collection: int
     genres: List[Genre]
+    franchises: List[int]
 
     @classmethod
     def from_json(cls, json_data: Dict[str,Any]) -> 'Anime':
@@ -117,4 +118,6 @@ class Anime:
             added_in_watching_collection=json_data['added_in_watching_collection'],
             added_in_postponed_collection=json_data['added_in_postponed_collection'],
             added_in_abandoned_collection=json_data['added_in_abandoned_collection'],
+            franchises=[]
         )
+

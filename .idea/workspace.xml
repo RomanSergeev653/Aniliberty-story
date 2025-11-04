@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bb27f2b-2ae6-41f0-a11a-e62895be22b3" name="Changes" comment="Описал класс Token и его функции подгрузки токена, авторизации и refresh">
-      <change afterPath="$PROJECT_DIR$/Anime_models.py" afterDir="false" />
+    <list default="true" id="5bb27f2b-2ae6-41f0-a11a-e62895be22b3" name="Changes" comment="Создал отдельный класс под Аниме данные и вспомогательные к нему классы.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Anime_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Anime_models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,14 +33,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Aniliberty Story" />
@@ -97,26 +97,40 @@
       <option name="project" value="LOCAL" />
       <updated>1761484183427</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Создал отдельный класс под Аниме данные и вспомогательные к нему классы.">
+      <option name="closed" value="true" />
+      <created>1762210254947</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762210254947</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Добавил авторизацию и обращение в коллецию. Работаю над ошибками" />
     <MESSAGE value="Описал класс Token и его функции подгрузки токена, авторизации и refresh" />
-    <option name="LAST_COMMIT_MESSAGE" value="Описал класс Token и его функции подгрузки токена, авторизации и refresh" />
+    <MESSAGE value="Создал отдельный класс под Аниме данные и вспомогательные к нему классы." />
+    <option name="LAST_COMMIT_MESSAGE" value="Создал отдельный класс под Аниме данные и вспомогательные к нему классы." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>94</line>
-          <option name="timeStamp" value="5" />
+          <line>41</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>41</line>
-          <option name="timeStamp" value="6" />
+          <line>149</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>173</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
