@@ -48,6 +48,11 @@ class Genre:
     name: str
 
 @dataclass
+class Franchise:
+    id: int
+    name: str
+
+@dataclass
 class Anime:
     id: int
     type: AnimeType
@@ -68,7 +73,7 @@ class Anime:
     added_in_postponed_collection: int
     added_in_abandoned_collection: int
     genres: List[Genre]
-    franchises: List[int]
+    franchises: List[Franchise]
 
     @classmethod
     def from_json(cls, json_data: Dict[str,Any]) -> 'Anime':

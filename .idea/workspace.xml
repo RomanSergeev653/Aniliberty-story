@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bb27f2b-2ae6-41f0-a11a-e62895be22b3" name="Changes" comment="Создал отдельный класс под Аниме данные и вспомогательные к нему классы.">
+    <list default="true" id="5bb27f2b-2ae6-41f0-a11a-e62895be22b3" name="Changes" comment="Добавил функцию которая находит все связанные с этим аниме франшизы и аниме которые включены в эту франшизу">
+      <change afterPath="$PROJECT_DIR$/Timer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Anime_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Anime_models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
@@ -24,6 +26,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -35,7 +40,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.main.executor": "Debug",
+    "Python.main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager"
@@ -105,32 +110,31 @@
       <option name="project" value="LOCAL" />
       <updated>1762210254947</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Добавил функцию которая находит все связанные с этим аниме франшизы и аниме которые включены в эту франшизу">
+      <option name="closed" value="true" />
+      <created>1762214826953</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762214826953</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Добавил авторизацию и обращение в коллецию. Работаю над ошибками" />
     <MESSAGE value="Описал класс Token и его функции подгрузки токена, авторизации и refresh" />
     <MESSAGE value="Создал отдельный класс под Аниме данные и вспомогательные к нему классы." />
-    <option name="LAST_COMMIT_MESSAGE" value="Создал отдельный класс под Аниме данные и вспомогательные к нему классы." />
+    <MESSAGE value="Добавил функцию которая находит все связанные с этим аниме франшизы и аниме которые включены в эту франшизу" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил функцию которая находит все связанные с этим аниме франшизы и аниме которые включены в эту франшизу" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>41</line>
+          <line>45</line>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>149</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>173</line>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
